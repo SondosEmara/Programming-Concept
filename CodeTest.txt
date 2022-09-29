@@ -1,0 +1,200 @@
+int F(int n)
+{
+    if(n<=1)
+        return 1;
+    int a=n+F(n-1);
+    int b=n*F(n/2);
+    int c=n-2-(a+b)%2;
+    int d=F(c);
+    return a+b+d;
+}
+
+
+
+
+f(4).
+f(3),n=4,
+f(2),n=4;
+f(C)
+
+
+
+//2
+f(2),n=3,
+f(1),n=3;
+f(C) ,n=3;
+
+f(3),n=4,
+f(2),n=4;
+f(C),n=4
+
+
+//3
+
+ACALLf(1) n=2;stage=1--a=2+1=3.
+Bf(1);n=2;b=2;stage=1--b=2*1=2.
+Cf(C),n=2;stage=1---a+b
+
+ACALLf(2),n=3,---stage=2;
+BCallf(1),n=3;
+Cf(C) ,n=3;
+
+ACALLf(3),n=4,
+BCallf(2),n=4;
+Cf(C),n=4
+
+
+
+
+
+int f(3).
+in structure //paramter--//actualN//callType
+//first iteration
+f(2)---actualN=3--type=ACALL. 
+f(1)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+
+
+//condition
+//SWAPING
+if(f.result!=NULL&&s.top().result==NULL){
+   swaping
+}
+//2
+f(1)--actualN=2--type=A.  result=3;
+f(1)--actualN=2.--type=B.   result=NULL
+f(c)--actualN=2.--type=C. d=1
+
+f(2)---actualN=3--type=A. 
+f(2)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+//3
+f(1)--actualN=2.--type=B.   result=2-->resulta
+f(1)--actualN=2--type=A.  result=3;-->resultB
+f(c)--actualN=2.--type=C. d=1
+
+f(2)---actualN=3--type=A. 
+f(2)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+
+//if(result!=Null&&result!=Null) check the next.
+if(next.Type==Dcall&&paramter==NULL) make partialResult=a+b=5;
+c=result2+result3;
+next.result=result1+result2;
+partailResult=a+b;
+f(1)--actualN=2.--type=C. d=1-->result=partialResult+1=6;
+
+f(2)---actualN=3--type=A. result=6+3=9
+f(2)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+//if(f.result!=NULL&&s.top().actualN!=f.actualN)
+
+f(2)---actualN=3.--type=B. result=6*3=12
+f(2)---actualN=3--type=A.  result=6+3=9
+partialREsult=12+9;
+
+f(c)---actualN=3.--type=C.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//second iteration int f(2)
+f(1)--actualN=2--type=A.  result=3;
+f(1)--actualN=2.--type=B. b=2*1=2
+f(c)--actualN=2.--type=C. d=1
+
+f(2)---actualN=3--type=A. if flag!=1 then (تم التفرع).a=a+b+d+3+1=
+f(2)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+
+
+//third iteration get top
+if(base case)--n<=1--
+if typeA:Result=actualN+1.
+if typeB:Result=actualN*1.
+id typeD:Result=1.
+
+Result=2+1=3--actualN=2.//a
+f(1)--actualN=2.--type=B.
+f(c)--actualN=2.--type=C.  
+
+f(2)---actualN=3--type=A.
+f(1)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+
+//fourth iteration replace result with f(1)
+
+f(1)--actualN=2.--type=B.
+Result=2+1=3--actualN=2.
+f(c)--actualN=2.--type=C.  
+
+f(2)---actualN=3--type=A.
+f(1)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+//5 iteration. get result of f(1)--type=BCall
+
+Result=2*1=2--actualN=2.type(b)
+Result=2+1=3--actualN=2. type(a)
+c=
+f(c)--actualN=2.--type=C.  
+
+f(2)---actualN=3--type=A.
+f(1)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+//if the two two top is result make summation (a+b)
+//check if after result make sum make-- f(c) 
+Result=2+3=5--actualN=2.type(b+a).
+//calculate c=1
+f(c)--actualN=2.--type=C.  
+
+f(2)---actualN=3--type=A.
+f(1)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+//
+
+f(1)--actualN=2.--type=C.
+Result=2+3=5--actualN=2.--type(b+a).  
+
+f(2)---actualN=3--type=A.
+f(1)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+//
+Result =1 --actualN=2.type(C).
+Result=2+3=5--actualN=2.--type(b+a). 
+
+f(2)---actualN=3--type=A. 3+result
+f(1)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+//
+Result=1+5=6+3=9 ,actualN=2----that result is f(2) result value 
+f(1)---actualN=3.--type=B.
+f(c)---actualN=3.--type=C.
+
+//
+result=3+9=13,actualN=3
+
+
+
+
